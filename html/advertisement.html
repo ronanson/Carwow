@@ -1,0 +1,104 @@
+<h1 class="text-light text-center" style="font-size: 55px; margin-top: 20px;">Hirdetés készítése</h1> 
+<section>
+    <div class="container">
+        <form action="#" method="post" enctype="multipart/form-data"  class="row">
+            <div class="text-light mx-auto col-lg-6 my-3">
+                
+
+                    <div class="form-group" style="margin-top: 10px;" >
+                        <h1 class="text-light text-center" style="font-size: 25px;">Jármű adatok:</h1> 
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adja meg a jármű modell nevét!</label>
+                        <input type="text" class="form-control" placeholder="Modell név" name="model" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uzemanyag">Márka kiválasztása:</label>
+                        <select class="markaData form-control" name="brand"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uzemanyag">Járműtípus kiválasztása:</label>
+                        <select class="tipusData form-control" name="cartype"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="evjarat">Évjárat kiválasztása:</label>
+                        <input type="number" id="evjarat" class="form-control" name="modelyear" min="1980" max="2021" value="2000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teljesitmeny">Teljesitmény kiválasztása:(LE - lóerő)</label>
+                        <input type="number" id="teljesitmeny" class="form-control" name="power" min="40" max="1000" value="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uzemanyag">Válassz egy üzemanyag típust:</label>
+                        <select id="uzemanyag" class="form-control" name="fuel">
+                            <option value="0">Benzin</option>
+                            <option value="1">Dízel</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="megtett">Kérem írja be a kilóméter óra állását!</label>
+                        <input type="number" id="megtett" class="form-control" name="kmdone" min="0" max="10000000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ar">Kérem írja be a jármű árát!(FT)</label>
+                        <input type="number" id="ar" class="form-control" name="price" min="0"  max="100000000" value="1000000" step="50000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lejarat">Válassza ki a jármű műszaki lejáratának időpontját!</label>
+                        <input type="datetime-local" class="form-control" name="expiredate" id="lejarat">
+                    </div>
+                </div>
+
+                <div class="text-light mx-auto col-lg-6 my-3">
+
+                    <div class="form-group" style="margin-top: 10px;">
+                        <h1 class="text-light text-center" style="font-size: 25px;">Hirdetés adatok:</h1> 
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adja meg a hirdetés rövid címét!</label>
+                        <input type="text" class="form-control" placeholder="Cím" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fizetett">Fizetetett hírdetést szeretne? (terhelési költséggel jár)</label>
+                        <select id="fizetett" class="form-control" name="payed">
+                            <option value="0">Nem</option>
+                            <option value="1">Igen</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adja meg a települését!</label>
+                        <input type="text" class="form-control" placeholder="Település" name="place" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adja meg a hirdetés Leírását!</label>
+                        <textarea  rows="8" class="form-control" placeholder="Leírás helye" name="description" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="img" style="margin-top: 45px;">Hírdetés kép: (Megengedett formátumok: .jpg, .png .jpeg)</label>
+                        <input type="file" id="img" name="img" accept="image/*">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" name="submit" class="btn btn-success"style="margin-top: 70px; width: 400px; height: 50px;">Létrehozás</button>
+                    </div>
+
+
+                
+                </div>
+            </form>
+    </div>
+</section>
